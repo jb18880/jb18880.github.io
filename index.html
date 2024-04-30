@@ -113,9 +113,24 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
 
   </li>
   </ul>
@@ -168,17 +183,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-04-29 21:30:33 / 修改时间：22:32:49" itemprop="dateCreated datePublished" datetime="2024-04-29T21:30:33+08:00">2024-04-29</time>
+              <time title="创建时间：2024-04-29 21:30:33" itemprop="dateCreated datePublished" datetime="2024-04-29T21:30:33+08:00">2024-04-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-30 23:10:42" itemprop="dateModified" datetime="2024-04-30T23:10:42+08:00">2024-04-30</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
                 </span>
             </span>
 
@@ -241,7 +262,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/04/29/install_zsh/" class="post-title-link" itemprop="url">install_zsh</a>
+            <a href="/2024/04/29/install_zsh/" class="post-title-link" itemprop="url">安装ZSH</a>
         </h2>
 
         <div class="post-meta">
@@ -250,10 +271,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-04-29 21:30:33 / 修改时间：22:10:12" itemprop="dateCreated datePublished" datetime="2024-04-29T21:30:33+08:00">2024-04-29</time>
+              <time title="创建时间：2024-04-29 21:30:33" itemprop="dateCreated datePublished" datetime="2024-04-29T21:30:33+08:00">2024-04-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-30 23:10:48" itemprop="dateModified" datetime="2024-04-30T23:10:48+08:00">2024-04-30</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -275,49 +302,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="ZSH的安装"><a href="#ZSH的安装" class="headerlink" title="ZSH的安装"></a>ZSH的安装</h3><p>zsh是一个功能强大的shell解释器</p>
-<ol>
-<li><p>安装zsh</p>
-<ul>
-<li><p>安装zsh</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zsh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查是否安装成功</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/shells</span><br><span class="line"></span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>配置zsh</p>
-<p>配置很复杂，使用开源脚本进行配置</p>
+          <h1 id="ZSH的安装"><a href="#ZSH的安装" class="headerlink" title="ZSH的安装"></a>ZSH的安装</h1><p>zsh是一个功能强大的shell解释器</p>
+<h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zsh</span><br></pre></td></tr></table></figure>
+
+<p>检查是否安装成功</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/shells</span><br><span class="line">...</span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置zsh"><a href="#配置zsh" class="headerlink" title="配置zsh"></a>配置zsh</h3><ol>
+<li>配置很复杂，建议使用开源脚本进行配置</li>
+</ol>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这个是配置zsh的开源脚本的链接</span><br><span class="line">https://github.com/ohmyzsh/ohmyzsh</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>准备一下</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>自动配置</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br><span class="line"><span class="comment">#访问github不顺畅的话，可以用下面的命令，把链接地址替换成了可以正常的访问的网址（这个地址由该项目的作者提供）</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改默认的shell解释器</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root字段为用户名，此处给root用户修改shell解释器；如果是其他用户，在此填写该用户的用户名即可。</span></span><br><span class="line">chsh -s /bin/zsh root</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>修改提示符为随机主题</p>
-<ul>
-<li><p>修改~&#x2F;.zshrc中的ZSH_THEME的值为random</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc +11</span><br><span class="line"></span><br><span class="line">ZSH_THEME=<span class="string">&quot;random&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过zsh命令修改主题</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">jb@localhost:~</span><br><span class="line">[oh-my-zsh] Random theme <span class="string">&#x27;sammy&#x27;</span> loaded</span><br><span class="line">~$ </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存自己喜欢的主题</p>
-<p>将自己喜欢的主题名替换random即可</p>
-</li>
-</ul>
-</li>
-<li><p>扩展使用zsh</p>
-<p>zsh支持使用插件扩充功能，待补充。</p>
-</li>
+<ol start="2">
+<li>安装git</li>
 </ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install git</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>通过脚本自动配置</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br><span class="line"><span class="comment">#访问github不顺畅的话，可以用下面的命令，把链接地址替换成了可以正常的访问的网址（这个地址由ohmyzsh项目的作者提供）</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>修改默认的shell解释器</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root字段为用户名，此处给root用户修改shell解释器；如果是其他用户，在此填写该用户的用户名即可。</span></span><br><span class="line">chsh -s /bin/zsh root</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改ZSH主题"><a href="#修改ZSH主题" class="headerlink" title="修改ZSH主题"></a>修改ZSH主题</h3><p>修改提示符为随机主题</p>
+<p>修改~&#x2F;.zshrc中的ZSH_THEME的值为random</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc +11</span><br><span class="line"></span><br><span class="line">ZSH_THEME=<span class="string">&quot;random&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过zsh命令修改主题</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">jb@localhost:~</span><br><span class="line">[oh-my-zsh] Random theme <span class="string">&#x27;sammy&#x27;</span> loaded</span><br><span class="line">~$ </span><br></pre></td></tr></table></figure>
+
+<p>保存自己喜欢的主题</p>
+<p>将自己喜欢的主题名替换random即可</p>
 <h3 id="Q-A：有点小问题"><a href="#Q-A：有点小问题" class="headerlink" title="Q&amp;A：有点小问题"></a>Q&amp;A：有点小问题</h3><ol>
 <li><p>为什么我使用<code>chsh</code>命令的时候，提示命令不存在？</p>
 <ul>
@@ -350,14 +369,7 @@
 <li>更改默认shell解释器<br>chsh -s &#x2F;bin&#x2F;zsh</li>
 <li>配置zsh</li>
 </ol>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot; --unattended</span></span><br><span class="line"></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<ul>
-<li><p>第二步，未切换终端告警如下（不知道为啥，希望有缘人解答，可以指明是哪一部分的知识更好）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[jbb@localhost]/root% sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br><span class="line">Cloning Oh My Zsh...</span><br><span class="line">fatal: cannot <span class="built_in">mkdir</span> /root/.oh-my-zsh: Permission denied</span><br><span class="line">Error: git <span class="built_in">clone</span> of oh-my-zsh repo failed</span><br><span class="line"></span><br><span class="line">[jbb@localhost]/root% sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/ma</span></span></span><br><span class="line"><span class="subst"><span class="string">ster/tools/install.sh)</span>&quot;</span> --unattended</span><br><span class="line">curl: (56) OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 104</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot; --unattended</span></span><br><span class="line"></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br></pre></td></tr></table></figure></blockquote>
 </li>
 </ol>
 
@@ -393,7 +405,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/04/29/install_wordpress/" class="post-title-link" itemprop="url">install_wordpress</a>
+            <a href="/2024/04/29/install_wordpress/" class="post-title-link" itemprop="url">安装wordpress</a>
         </h2>
 
         <div class="post-meta">
@@ -402,9 +414,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-04-29 18:39:41 / 修改时间：18:50:17" itemprop="dateCreated datePublished" datetime="2024-04-29T18:39:41+08:00">2024-04-29</time>
+              <time title="创建时间：2024-04-29 18:39:41" itemprop="dateCreated datePublished" datetime="2024-04-29T18:39:41+08:00">2024-04-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-30 23:10:45" itemprop="dateModified" datetime="2024-04-30T23:10:45+08:00">2024-04-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
+                </span>
             </span>
 
           
@@ -418,22 +445,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=http://10.0.0.1:10809</span><br><span class="line"><span class="built_in">export</span> https_proxy=http://10.0.0.1:10809</span><br></pre></td></tr></table></figure>
+          <h1 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h1><h3 id="开启本地代理"><a href="#开启本地代理" class="headerlink" title="开启本地代理"></a>开启本地代理</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=http://10.0.0.1:10809</span><br><span class="line"><span class="built_in">export</span> https_proxy=http://10.0.0.1:10809</span><br></pre></td></tr></table></figure>
 
-<p>拉取wordpress</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull wordpress</span><br></pre></td></tr></table></figure>
+<h3 id="部署docker"><a href="#部署docker" class="headerlink" title="部署docker"></a>部署docker</h3><h3 id="拉取wordpress"><a href="#拉取wordpress" class="headerlink" title="拉取wordpress"></a>拉取wordpress</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull wordpress</span><br></pre></td></tr></table></figure>
 
-<p>拉取mysql</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql</span><br></pre></td></tr></table></figure>
+<h3 id="拉取mysql"><a href="#拉取mysql" class="headerlink" title="拉取mysql"></a>拉取mysql</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql</span><br></pre></td></tr></table></figure>
 
-<p>运行mysql容器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --privileged=true --name mysql -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mysql:latest</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#登录数据库</span><br><span class="line">root@wordpress:~# docker exec -it mysql  bash</span><br><span class="line">bash-4.4# mysql -u root -p123456</span><br><span class="line">#建立数据库</span><br><span class="line">CREATE DATABASE IF NOT EXISTS wordpress;</span><br><span class="line">#创建用户</span><br><span class="line">CREATE USER &#x27;wordpress&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;wordpress&#x27;;</span><br><span class="line">#授权</span><br><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO &#x27;wordpress&#x27;@&#x27;%&#x27;;</span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+<h3 id="运行mysql容器"><a href="#运行mysql容器" class="headerlink" title="运行mysql容器"></a>运行mysql容器</h3><ol>
+<li><p>启动mysql容器</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --privileged=<span class="literal">true</span> --name mysql -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mysql:latest</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建数据库和授权用户</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#登录数据库</span></span><br><span class="line">root@wordpress:~<span class="comment"># docker exec -it mysql  bash</span></span><br><span class="line">bash-4.4<span class="comment"># mysql -u root -p123456</span></span><br><span class="line"><span class="comment">#建立数据库</span></span><br><span class="line">CREATE DATABASE IF NOT EXISTS wordpress;</span><br><span class="line"><span class="comment">#创建用户</span></span><br><span class="line">CREATE USER <span class="string">&#x27;wordpress&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED BY <span class="string">&#x27;wordpress&#x27;</span>;</span><br><span class="line"><span class="comment">#授权</span></span><br><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO <span class="string">&#x27;wordpress&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="运行wordpress容器"><a href="#运行wordpress容器" class="headerlink" title="运行wordpress容器"></a>运行wordpress容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name wordpress --link mysql -p 80:80 -d wordpress</span><br></pre></td></tr></table></figure>
 
-<p>运行wordpress容器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name wordpress --link mysql -p 80:80 -d wordpress</span><br></pre></td></tr></table></figure>
-
-<p>验证</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#浏览器输入ip地址</span><br><span class="line">填写数据库中的信息，如下图所示</span><br></pre></td></tr></table></figure>
+<h3 id="填写配置信息"><a href="#填写配置信息" class="headerlink" title="填写配置信息"></a>填写配置信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#浏览器输入ip地址</span><br><span class="line">填写数据库中的信息，如下图所示</span><br></pre></td></tr></table></figure>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240427171659822.png"></p>
 
@@ -526,7 +553,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
