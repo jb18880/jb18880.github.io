@@ -264,7 +264,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-30 23:10:48" itemprop="dateModified" datetime="2024-04-30T23:10:48+08:00">2024-04-30</time>
+                <time title="修改时间：2024-04-30 23:21:46" itemprop="dateModified" datetime="2024-04-30T23:21:46+08:00">2024-04-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -324,19 +324,17 @@
 <p>将自己喜欢的主题名替换random即可</p>
 <h3 id="Q-A：有点小问题"><a href="#Q-A：有点小问题" class="headerlink" title="Q&amp;A：有点小问题"></a>Q&amp;A：有点小问题</h3><ol>
 <li><p>为什么我使用<code>chsh</code>命令的时候，提示命令不存在？</p>
-<ul>
-<li><p>提示命令不存在</p>
+<p>提示命令不存在</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#此处代码为伪代码</span></span><br><span class="line">命令:chsh -s /bin/zsh</span><br><span class="line">提示：<span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>找到<code>chsh</code>命令的安装包</p>
+
+<p>找到<code>chsh</code>命令的安装包</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#参考链接：https://forums.centos.org/viewtopic.php?t=73864</span></span><br><span class="line"><span class="comment">#此处代码为论坛上的代码</span></span><br><span class="line">[root@centos8 ~]<span class="comment"># dnf provides &#x27;*/chsh&#x27;</span></span><br><span class="line">Last metadata expiration check: 0:51:14 ago on Sat Mar 28 14:23:21 2020.</span><br><span class="line">util-linux-user-2.32.1-17.el8.x86_64 : libuser based util-linux utilities</span><br><span class="line">Repo : BaseOS</span><br><span class="line">Matched from:</span><br><span class="line">Filename : /etc/pam.d/chsh</span><br><span class="line">Filename : /usr/bin/chsh</span><br><span class="line">Filename : /usr/share/bash-completion/completions/chsh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>装包</p>
+
+<p>装包</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf -y install util-linux-user-2.32.1-17.el8.x86_64</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[jbb@localhost ~]$ chsh -s /bin/zsh</span><br><span class="line">Changing shell <span class="keyword">for</span> jbb.</span><br></pre></td></tr></table></figure></li>
-</ul>
+
+<p>验证</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[jbb@localhost ~]$ chsh -s /bin/zsh</span><br><span class="line">Changing shell <span class="keyword">for</span> jbb.</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>为什么安装完zsh提示没有配置文件？</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[jbb@localhost]~% zsh</span><br><span class="line">This is the Z Shell configuration <span class="keyword">function</span> <span class="keyword">for</span> new <span class="built_in">users</span>,</span><br><span class="line">zsh-newuser-install.</span><br><span class="line">You are seeing this message because you have no zsh startup files</span><br><span class="line">(the files .zshenv, .zprofile, .zshrc, .zlogin <span class="keyword">in</span> the directory</span><br><span class="line">~).  This <span class="keyword">function</span> can <span class="built_in">help</span> you with a few settings that should</span><br><span class="line">make your use of the shell easier.</span><br><span class="line"></span><br><span class="line">You can:</span><br><span class="line"></span><br><span class="line">(q)  Quit and <span class="keyword">do</span> nothing.  The <span class="keyword">function</span> will be run again next time.</span><br><span class="line"></span><br><span class="line">(0)  Exit, creating the file ~/.zshrc containing just a comment.</span><br><span class="line">     That will prevent this <span class="keyword">function</span> being run again.</span><br><span class="line"></span><br><span class="line">(1)  Continue to the main menu.</span><br><span class="line"></span><br><span class="line">--- Type one of the keys <span class="keyword">in</span> parentheses --- </span><br><span class="line"></span><br><span class="line">q 退出（下次使用zsh还有这个告警）</span><br><span class="line">0 创建一个空的配置文件（用于取消该告警）</span><br><span class="line">1 手动配置各种参数</span><br></pre></td></tr></table></figure>
