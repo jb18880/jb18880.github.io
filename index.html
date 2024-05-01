@@ -145,7 +145,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/hexo-solve-picture-can-t-show-problem/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/hexo_solve_picture_can't_show_problem/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -159,7 +159,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/05/01/hexo-solve-picture-can-t-show-problem/" class="post-title-link" itemprop="url">hexo_solve_picture_can't_show_problem</a>
+            <a href="/2024/05/01/hexo_solve_picture_can't_show_problem/" class="post-title-link" itemprop="url">hexo图片上传</a>
         </h2>
 
         <div class="post-meta">
@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-05-01 10:10:18 / 修改时间：17:07:24" itemprop="dateCreated datePublished" datetime="2024-05-01T10:10:18+08:00">2024-05-01</time>
+              <time title="创建时间：2024-05-01 10:10:18 / 修改时间：17:17:53" itemprop="dateCreated datePublished" datetime="2024-05-01T10:10:18+08:00">2024-05-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -193,11 +193,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="在hexo的source文件夹下面中创建一个存放图片的文件夹"><a href="#在hexo的source文件夹下面中创建一个存放图片的文件夹" class="headerlink" title="在hexo的source文件夹下面中创建一个存放图片的文件夹"></a>在hexo的source文件夹下面中创建一个存放图片的文件夹</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir Q:\博客\source\pic</span><br></pre></td></tr></table></figure>
+          <p>目标：typora和hexo网址都能访问图片</p>
+<p>缺点：如果文章中图片多，上传会很慢；所有图片都在同一个文件夹中，不变管理</p>
+<p>创建文件夹</p>
+<h3 id="在hexo的source文件夹下面中创建一个存放图片的文件夹"><a href="#在hexo的source文件夹下面中创建一个存放图片的文件夹" class="headerlink" title="在hexo的source文件夹下面中创建一个存放图片的文件夹"></a>在hexo的source文件夹下面中创建一个存放图片的文件夹</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir Q:\博客\source\pic</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../pic/image-20240501170652341.png" alt="image-20240501170652341"></p>
-<h3 id="修改typora的图片存放路径为该文件夹"><a href="#修改typora的图片存放路径为该文件夹" class="headerlink" title="修改typora的图片存放路径为该文件夹"></a>修改typora的图片存放路径为该文件夹</h3><p><img src="/../pic/image-20240501170721846.png" alt="image-20240501170721846"></p>
-
+<h3 id="修改图片存放路径"><a href="#修改图片存放路径" class="headerlink" title="修改图片存放路径"></a>修改图片存放路径<img src="/../pic/image-20240501170721846.png" alt="image-20240501170721846"></h3>
       
     </div>
 
@@ -216,7 +218,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/hexo-post-deploy-to-github/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/hexo_post_deploy_to_github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -230,7 +232,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/05/01/hexo-post-deploy-to-github/" class="post-title-link" itemprop="url">hexo_post_deploy_to_github</a>
+            <a href="/2024/05/01/hexo_post_deploy_to_github/" class="post-title-link" itemprop="url">github托管hexo</a>
         </h2>
 
         <div class="post-meta">
@@ -241,7 +243,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-05-01 09:51:47 / 修改时间：10:10:31" itemprop="dateCreated datePublished" datetime="2024-05-01T09:51:47+08:00">2024-05-01</time>
+              <time title="创建时间：2024-05-01 09:51:47 / 修改时间：17:36:58" itemprop="dateCreated datePublished" datetime="2024-05-01T09:51:47+08:00">2024-05-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -264,7 +266,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="将hexo交给github进行托管"><a href="#将hexo交给github进行托管" class="headerlink" title="将hexo交给github进行托管"></a>将hexo交给github进行托管</h1><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><h3 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h3><h3 id="生成ssh秘钥"><a href="#生成ssh秘钥" class="headerlink" title="生成ssh秘钥"></a>生成ssh秘钥</h3><h3 id="托管配置"><a href="#托管配置" class="headerlink" title="托管配置"></a>托管配置</h3>
+          <h1 id="将hexo交给github进行托管"><a href="#将hexo交给github进行托管" class="headerlink" title="将hexo交给github进行托管"></a>将hexo交给github进行托管</h1><h3 id="https-blog-fiveth-cc-p-bb32-html"><a href="#https-blog-fiveth-cc-p-bb32-html" class="headerlink" title="https://blog.fiveth.cc/p/bb32.html"></a><a target="_blank" rel="noopener" href="https://blog.fiveth.cc/p/bb32.html">https://blog.fiveth.cc/p/bb32.html</a></h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ju4m1c7WR/?spm_id_from=333.337.search-card.all.click&vd_source=bb5a177c81181043998dcb757fd37e6d">https://www.bilibili.com/video/BV1Ju4m1c7WR/?spm_id_from=333.337.search-card.all.click&amp;vd_source=bb5a177c81181043998dcb757fd37e6d</a></p>
+<p>写的真好，还有视频</p>
+
       
     </div>
 
@@ -297,7 +301,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/05/01/install_hexo/" class="post-title-link" itemprop="url">install_hexo</a>
+            <a href="/2024/05/01/install_hexo/" class="post-title-link" itemprop="url">安装hexo</a>
         </h2>
 
         <div class="post-meta">
@@ -308,7 +312,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-05-01 09:42:29 / 修改时间：09:44:07" itemprop="dateCreated datePublished" datetime="2024-05-01T09:42:29+08:00">2024-05-01</time>
+              <time title="创建时间：2024-05-01 09:42:29 / 修改时间：17:18:02" itemprop="dateCreated datePublished" datetime="2024-05-01T09:42:29+08:00">2024-05-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -657,7 +661,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-01 08:50:02" itemprop="dateModified" datetime="2024-05-01T08:50:02+08:00">2024-05-01</time>
+                <time title="修改时间：2024-05-01 17:19:16" itemprop="dateModified" datetime="2024-05-01T17:19:16+08:00">2024-05-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -697,7 +701,7 @@
 
 <h3 id="填写配置信息"><a href="#填写配置信息" class="headerlink" title="填写配置信息"></a>填写配置信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#浏览器输入ip地址</span><br><span class="line">填写数据库中的信息，如下图所示</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240427171659822.png"></p>
+<p><img src="/../pic/image-20240427171659822.png" alt="image-20240427171659822"></p>
 
       
     </div>
