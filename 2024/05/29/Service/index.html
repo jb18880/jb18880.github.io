@@ -20,28 +20,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="Service1. Service创建1.1 定义service定义 Service 的 yaml 文件如下： 1234567891011121314###文件名：service.yamlkind: ServiceapiVersion: v1metadata:  name: my-servicespec:  selector:    app: nginx  ports:    - protocol">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Service">
+<meta property="og:url" content="http://example.com/2024/05/29/Service/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Service1. Service创建1.1 定义service定义 Service 的 yaml 文件如下： 1234567891011121314###文件名：service.yamlkind: ServiceapiVersion: v1metadata:  name: my-servicespec:  selector:    app: nginx  ports:    - protocol">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-29T11:17:46.000Z">
+<meta property="article:modified_time" content="2024-05-29T11:19:55.999Z">
 <meta property="article:author" content="Sekitonu">
+<meta property="article:tag" content="service">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2024/05/29/Service/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>Service | Hexo</title>
   
 
 
@@ -149,78 +154,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/29/base-deployment-and-service-md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/29/base-deployment-and-service-md/" class="post-title-link" itemprop="url">base_deployment_and_service.md</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-29 19:21:15 / 修改时间：19:22:20" itemprop="dateCreated datePublished" datetime="2024-05-29T19:21:15+08:00">2024-05-29</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/k8s/" itemprop="url" rel="index"><span itemprop="name">k8s</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">registry.cn-beijing.aliyuncs.com/dotbalo/nginx:1.15.12-alpine</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">80</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">my-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">80</span>   <span class="comment">#Service自己的端口号</span></span><br><span class="line">      <span class="attr">targetPort:</span> <span class="number">80</span>   <span class="comment">#容器暴露出来的端口号</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -236,10 +173,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/29/Service/" class="post-title-link" itemprop="url">Service</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Service
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -272,7 +208,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h1><h2 id="1-Service创建"><a href="#1-Service创建" class="headerlink" title="1. Service创建"></a>1. Service创建</h2><h3 id="1-1-定义service"><a href="#1-1-定义service" class="headerlink" title="1.1 定义service"></a>1.1 定义service</h3><p>定义 Service 的 yaml 文件如下：</p>
+        <h1 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h1><h2 id="1-Service创建"><a href="#1-Service创建" class="headerlink" title="1. Service创建"></a>1. Service创建</h2><h3 id="1-1-定义service"><a href="#1-1-定义service" class="headerlink" title="1.1 定义service"></a>1.1 定义service</h3><p>定义 Service 的 yaml 文件如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###文件名：service.yaml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">my-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">80</span>   <span class="comment">#Service自己的端口号</span></span><br><span class="line">      <span class="attr">targetPort:</span> <span class="number">80</span>   <span class="comment">#容器暴露出来的端口号</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>定义deployment的yaml文件如下：</p>
@@ -361,806 +297,36 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">controlplane</span> <span class="string">$</span> <span class="string">kubectl</span> <span class="string">get</span> <span class="string">svc</span> <span class="string">kube-dns</span> <span class="string">-n</span> <span class="string">kube-system</span> <span class="string">-o</span> <span class="string">yaml</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">annotations:</span></span><br><span class="line">    <span class="attr">prometheus.io/port:</span> <span class="string">&quot;9153&quot;</span></span><br><span class="line">    <span class="attr">prometheus.io/scrape:</span> <span class="string">&quot;true&quot;</span></span><br><span class="line">  <span class="attr">creationTimestamp:</span> <span class="string">&quot;2024-05-11T15:42:53Z&quot;</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">k8s-app:</span> <span class="string">kube-dns</span></span><br><span class="line">    <span class="attr">kubernetes.io/cluster-service:</span> <span class="string">&quot;true&quot;</span></span><br><span class="line">    <span class="attr">kubernetes.io/name:</span> <span class="string">CoreDNS</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-dns</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-system</span></span><br><span class="line">  <span class="attr">resourceVersion:</span> <span class="string">&quot;243&quot;</span></span><br><span class="line">  <span class="attr">uid:</span> <span class="string">6676ccb7-16ed-4c03-924b-fcfb46bc94b4</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">clusterIP:</span> <span class="number">10.96</span><span class="number">.0</span><span class="number">.10</span></span><br><span class="line">  <span class="attr">clusterIPs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">10.96</span><span class="number">.0</span><span class="number">.10</span></span><br><span class="line">  <span class="attr">internalTrafficPolicy:</span> <span class="string">Cluster</span></span><br><span class="line">  <span class="attr">ipFamilies:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">IPv4</span></span><br><span class="line">  <span class="attr">ipFamilyPolicy:</span> <span class="string">SingleStack</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">dns</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">53</span></span><br><span class="line">    <span class="attr">protocol:</span> <span class="string">UDP</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">53</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">dns-tcp</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">53</span></span><br><span class="line">    <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">53</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">metrics</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">9153</span></span><br><span class="line">    <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">9153</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">k8s-app:</span> <span class="string">kube-dns</span></span><br><span class="line">  <span class="attr">sessionAffinity:</span> <span class="string">None</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">ClusterIP</span></span><br><span class="line"><span class="attr">status:</span></span><br><span class="line">  <span class="attr">loadBalancer:</span> &#123;&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/service/" rel="tag"># service</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/front-end-access/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/01/front-end-access/" class="post-title-link" itemprop="url">front_end_access</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-01 21:22:54" itemprop="dateCreated datePublished" datetime="2024-05-01T21:22:54+08:00">2024-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-03 08:42:08" itemprop="dateModified" datetime="2024-05-03T08:42:08+08:00">2024-05-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="认识html"><a href="#认识html" class="headerlink" title="认识html"></a>认识html</h3><p>html主体结构是什么样的？</p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/html/html-intro.html">HTML 简介</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML 练习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
 
 
-
-
-
-<h3 id="文本标签"><a href="#文本标签" class="headerlink" title="文本标签"></a>文本标签</h3><p>html文本标签有五种</p>
-<ul>
-<li>标题标签<code>&lt;h1&gt;标题标签&lt;/h1&gt;</code></li>
-<li>段落标签<code>&lt;p&gt;段落标签&lt;/p&gt;</code></li>
-<li>有序标签 <code>&lt;ol&gt;&lt;/ol&gt;</code></li>
-<li>无序标签 <code>&lt;ul&gt;&lt;/ul&gt;</code></li>
-<li>表格 <code>&lt;table&gt;&lt;/table&gt;</code><ul>
-<li>表格行标签 <code>&lt;tr&gt;&lt;/tr&gt;</code>   ：一个table中包含行，一组<code>&lt;tr&gt;&lt;/tr&gt;</code>就代表一行</li>
-<li>表格列标题 <code>&lt;th&gt;&lt;/th&gt;</code>   ：列标题其实就是加粗的行元素</li>
-<li>表格行元素 <code>&lt;td&gt;&lt;/td&gt;</code></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>html 练习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>h代表标题标签<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>一级标题标签<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>二级标题标签<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>三级标题标签<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>四级标题标签<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h5</span>&gt;</span>五级标题标签<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h6</span>&gt;</span>六级标题标签<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p代表段落标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p1</span>&gt;</span>这是段落标签<span class="tag">&lt;/<span class="name">p1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p2</span>&gt;</span>这是段落标签<span class="tag">&lt;/<span class="name">p2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p3</span>&gt;</span>这是段落标签<span class="tag">&lt;/<span class="name">p3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>段落标签是用来更改文本样式的<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        更改文本样式：<span class="tag">&lt;<span class="name">b</span>&gt;</span>字体加粗<span class="tag">&lt;/<span class="name">b</span>&gt;</span>、<span class="tag">&lt;<span class="name">i</span>&gt;</span>斜体<span class="tag">&lt;/<span class="name">i</span>&gt;</span>、<span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span>、<span class="tag">&lt;<span class="name">s</span>&gt;</span>删除线<span class="tag">&lt;/<span class="name">s</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>ul代表无序列表<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>无序列表元素1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>无序列表元素2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>无序列表元素3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>ol代表有序列表<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>有序列表元素1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>有序列表元素2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>有序列表元素3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;4&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            tr(即table row)中的元素代表一行的信息</span><br><span class="line">            如果这一行中的信息是标题，就用th表示</span><br><span class="line">            如果这一行中的信息是元素，就用td表示</span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题3<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素11<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素13<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素21<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素22<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素23<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素31<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素32<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>元素33<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="HTML空元素"><a href="#HTML空元素" class="headerlink" title="HTML空元素"></a>HTML空元素</h3><p>没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。</p>
-<p><code>&lt;br&gt;</code> 就是没有关闭标签的空元素（<code>&lt;br&gt;</code> 标签定义换行）。</p>
-<p>在 XHTML、XML 以及未来版本的 HTML 中，所有元素都必须被关闭。</p>
-<p>在开始标签中添加斜杠，比如 <code>&lt;br /&gt;</code>，是关闭空元素的正确方法，HTML、XHTML 和 XML 都接受这种方式。</p>
-<p>即使 <code>&lt;br&gt;</code> 在所有浏览器中都是有效的，但使用 <code>&lt;br /&gt;</code> 其实是更长远的保障。</p>
-<ul>
-<li><p>换行标签</p>
-<p><code>&lt;br&gt;</code> ，<code>&lt;br /&gt;</code></p>
-</li>
-<li><p>分割线标签</p>
-<p><code>&lt;hr&gt;</code></p>
-</li>
-</ul>
-<h3 id="标签属性"><a href="#标签属性" class="headerlink" title="标签属性"></a>标签属性</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/html/html-attributes.html">HTML 属性</a></p>
-<h4 id="HTML-属性"><a href="#HTML-属性" class="headerlink" title="HTML 属性"></a>HTML 属性</h4><ul>
-<li><p>HTML 元素可以设置<strong>属性</strong></p>
-</li>
-<li><p>属性可以在元素中添加<strong>附加信息</strong></p>
-</li>
-<li><p>属性一般描述于<strong>开始标签</strong></p>
-</li>
-<li><p>属性总是以名称&#x2F;值对的形式出现，**比如：name&#x3D;”value”**。</p>
-</li>
-<li><p>属性名称不区分大小写，属性值区分大小写 </p>
-</li>
-<li><p>有些属性是某个标签独有的，一般在开始标签中配置</p>
-<p>有些属性是共有的，例如：class，id，style</p>
-</li>
-</ul>
-<h5 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h5><p><code>&lt;a&gt;&lt;/a&gt;</code>标签使用来插入超链接的</p>
-<p><code>&lt;a&gt;&lt;/a&gt;</code>标签中常用的属性有<code>herf</code>和<code>target</code></p>
-<p><code>herf</code>属性用来指明链接的地址</p>
-<p><code>target</code>用来指明链接打开窗口的方式：直接跳转（_self），打开新窗口跳转(__blank)，从父窗口跳转（parent），从顶层窗口跳转（__top）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Specifies where to display the linked URL. It is a name of, or keyword for, a browsing context: a tab, window, or &lt;iframe&gt;. The following keywords have special meanings:</span><br><span class="line"></span><br><span class="line">_self: Load the URL into the same browsing context as the current one. This is the default behavior.</span><br><span class="line">_blank: Load the URL into a new browsing context. This is usually a tab, but users can configure browsers to use new windows instead.</span><br><span class="line">_parent: Load the URL into the parent browsing context of the current one. If there is no parent, this behaves the same way as _self.</span><br><span class="line">_top: Load the URL into the top-level browsing context (that is, the &quot;highest&quot; browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this behaves the same way as _self.</span><br></pre></td></tr></table></figure>
-
-<p><code>&lt;a&gt;&lt;/a&gt;</code>之间的值是文本描述</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com&quot;</span>&gt;</span>百度的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>这是带有blank属性的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="img标签"><a href="#img标签" class="headerlink" title="img标签"></a>img标签</h5><p><code>img</code>标签是用来插入图片的</p>
-<p><code>src</code>指明文件路径，可以是本地路径，也可以是网络路径</p>
-<p><code>alt</code>用来显示提示信息，如果<code>图片不存在</code>，就提示该信息</p>
-<p><code>width</code>用来设置图片的宽度</p>
-<p><code>height</code>用来设置图片的高度</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML 属性<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://ceccm.com.my/wp-content/uploads/2021/04/CM_200053-Greeting-Post-2021_Labour-Day_Square-1024x1024.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;图片无法显示&quot;</span> &gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;wallhaven-9mjoy1.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;图片无法显示&quot;</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;wallhaven-9mjoy1.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;100&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/05/01/front-end-access/" rel="prev" title="front_end_access">
+      <i class="fa fa-chevron-left"></i> front_end_access
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/05/29/base-deployment-and-service-md/" rel="next" title="base_deployment_and_service.md">
+      base_deployment_and_service.md <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/how_to_modify_ngvigation_bar/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/01/how_to_modify_ngvigation_bar/" class="post-title-link" itemprop="url">hexo-next修改导航栏</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-01 17:58:56 / 修改时间：18:16:32" itemprop="dateCreated datePublished" datetime="2024-05-01T17:58:56+08:00">2024-05-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://cs-cshi.github.io/hexo-blog/Hexo-NexT%20%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE/">Hexo 博客 NexT 主题下如何添加分类、标签</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/hexo_solve_picture_can't_show_problem/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/01/hexo_solve_picture_can't_show_problem/" class="post-title-link" itemprop="url">hexo图片上传</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-01 10:10:18 / 修改时间：21:14:10" itemprop="dateCreated datePublished" datetime="2024-05-01T10:10:18+08:00">2024-05-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>目标：typora和hexo网址都能访问图片</p>
-<p>缺点：如果文章中图片多，上传会很慢；所有图片都在同一个文件夹中，不便管理</p>
-<h3 id="在hexo的source文件夹下面中创建一个存放图片的文件夹"><a href="#在hexo的source文件夹下面中创建一个存放图片的文件夹" class="headerlink" title="在hexo的source文件夹下面中创建一个存放图片的文件夹"></a>在hexo的source文件夹下面中创建一个存放图片的文件夹</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir Q:\博客\source\pic</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../pic/image-20240501170652341.png" alt="image-20240501170652341"></p>
-<h3 id="修改图片存放路径"><a href="#修改图片存放路径" class="headerlink" title="修改图片存放路径"></a>修改图片存放路径<img src="/../pic/image-20240501170721846.png" alt="image-20240501170721846"></h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/hexo_post_deploy_to_github/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/01/hexo_post_deploy_to_github/" class="post-title-link" itemprop="url">github托管hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-01 09:51:47 / 修改时间：18:16:05" itemprop="dateCreated datePublished" datetime="2024-05-01T09:51:47+08:00">2024-05-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="将hexo交给github进行托管"><a href="#将hexo交给github进行托管" class="headerlink" title="将hexo交给github进行托管"></a>将hexo交给github进行托管</h1><h3 id="如何用Hexo搭建个人博客"><a href="#如何用Hexo搭建个人博客" class="headerlink" title="如何用Hexo搭建个人博客?"></a><a target="_blank" rel="noopener" href="https://blog.fiveth.cc/p/bb32.html">如何用Hexo搭建个人博客?</a></h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ju4m1c7WR/?spm_id_from=333.337.search-card.all.click&vd_source=bb5a177c81181043998dcb757fd37e6d">【零成本】Hexo个人博客搭建教程 | 无需服务器</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/install_hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/01/install_hexo/" class="post-title-link" itemprop="url">安装hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-01 09:42:29 / 修改时间：17:18:02" itemprop="dateCreated datePublished" datetime="2024-05-01T09:42:29+08:00">2024-05-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a>安装HEXO</h1><h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>Node.js 为大多数平台提供了官方的 <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">安装程序</a>。对于中国大陆地区用户，可以前往 <a target="_blank" rel="noopener" href="https://npmmirror.com/mirrors/node/">淘宝 Node.js 镜像</a> 下载。</p>
-<p>其它的安装方法：</p>
-<ul>
-<li>Windows：通过 <a target="_blank" rel="noopener" href="https://github.com/jasongin/nvs/">nvs</a>（推荐）或者 <a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">nvm</a> 安装。</li>
-<li>Mac：使用 <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a> 或 <a target="_blank" rel="noopener" href="http://www.macports.org/">MacPorts</a> 安装。</li>
-<li>Linux（DEB&#x2F;RPM-based）：从 <a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions">NodeSource</a> 安装。</li>
-<li>其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/package-manager/">指导</a>。</li>
-</ul>
-<p>对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Installation Instructions</span><br><span class="line">Node.js</span><br><span class="line">Node.js v22.x:</span><br><span class="line"></span><br><span class="line">Using Ubuntu</span><br><span class="line">curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - &amp;&amp;\</span><br><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><ul>
-<li>Windows：下载并安装 <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git</a>。</li>
-<li>Mac：使用 <a target="_blank" rel="noopener" href="http://mxcl.github.com/homebrew/">Homebrew</a>, <a target="_blank" rel="noopener" href="http://www.macports.org/">MacPorts</a> 或者下载 <a target="_blank" rel="noopener" href="http://sourceforge.net/projects/git-osx-installer/">安装程序</a>。</li>
-<li>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code></li>
-<li>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="开启本地代理"><a href="#开启本地代理" class="headerlink" title="开启本地代理"></a>开启本地代理</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=http://10.0.0.1:10809</span><br><span class="line"><span class="built_in">export</span> https_proxy=http://10.0.0.1:10809</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="安装HEXO-1"><a href="#安装HEXO-1" class="headerlink" title="安装HEXO"></a>安装HEXO</h3><p>安装hexo</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-
-<p>查看版本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo v</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="配置HEXO"><a href="#配置HEXO" class="headerlink" title="配置HEXO"></a>配置HEXO</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"></span><br><span class="line">example：</span><br><span class="line">hexo init wahaha</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>下载主题到本地</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> wahaha</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<p>配置主题</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> wahaha</span><br><span class="line">vim _config.yml</span><br><span class="line">...</span><br><span class="line">theme: next</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<h3 id="预览网站"><a href="#预览网站" class="headerlink" title="预览网站"></a>预览网站</h3><p>生成网页</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> wahaha &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
-
-<p>开启hexo服务</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> wahaha &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/29/change_the_language_of_hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/29/change_the_language_of_hexo/" class="post-title-link" itemprop="url">修改hexo的默认语言</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-29 21:30:33" itemprop="dateCreated datePublished" datetime="2024-04-29T21:30:33+08:00">2024-04-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-30 23:10:42" itemprop="dateModified" datetime="2024-04-30T23:10:42+08:00">2024-04-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="修改hexo的默认语言"><a href="#修改hexo的默认语言" class="headerlink" title="修改hexo的默认语言"></a>修改hexo的默认语言</h1><h3 id="hexo支持的语言"><a href="#hexo支持的语言" class="headerlink" title="hexo支持的语言"></a>hexo支持的语言</h3><p>hexo支持的语言与主题是相关的，例如我用的<code>hexo主题</code>是<code>next</code></p>
-<p><code>/hexo</code>为hexo的安装路径</p>
-<p><code>/themes/next/languages</code>为hexo安装路径下的主题路径以及其子路径</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@hexo:/hexo/themes/next/languages<span class="comment"># ls /hexo/themes/next/languages</span></span><br><span class="line">ar.yml  de.yml  es.yml  fr.yml  id.yml  ja.yml  nl.yml  pt.yml  tr.yml vi.yml  zh-HK.yml default.yml  en.yml  fa.yml  hu.yml  it.yml  ko.yml  pt-BR.yml  ru.yml  uk.yml  zh-CN.yml  zh-TW.yml</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改hexo默认语言"><a href="#修改hexo默认语言" class="headerlink" title="修改hexo默认语言"></a>修改hexo默认语言</h3><p><code>/hexo/_config.yml</code>为hexo的主配置文件，hexo所有的配置都在这个文件里面</p>
-<p>将language字段的参数改成该主题支持的语言即可</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">root@hexo:/hexo<span class="comment"># vim /hexo/_config.yml</span></span><br><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: Hexo</span><br><span class="line">subtitle: <span class="string">&#x27;&#x27;</span></span><br><span class="line">description: <span class="string">&#x27;&#x27;</span></span><br><span class="line">keywords:</span><br><span class="line">author: John Doe</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="重新生成静态网页"><a href="#重新生成静态网页" class="headerlink" title="重新生成静态网页"></a>重新生成静态网页</h3><p>在hexo安装目录下面的任何路径都可执行重新生成静态网页的命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">root@hexo:/hexo<span class="comment"># hexo g</span></span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded <span class="keyword">in</span> 147 ms</span><br><span class="line">INFO  Generated: 2024/04/29/install_zsh/index.html</span><br><span class="line">INFO  Generated: 2024/04/27/hello-world/index.html</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">INFO  Generated: archives/2024/04/index.html</span><br><span class="line">INFO  Generated: archives/2024/index.html</span><br><span class="line">INFO  Generated: tags/zsh/index.html</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: categories/shell/index.html</span><br><span class="line">INFO  Generated: 2024/04/29/install_wordpress/index.html</span><br><span class="line">INFO  9 files generated <span class="keyword">in</span> 144 ms</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><p>在hexo安装目录下面的任何路径都可执行启动服务器的命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@hexo:/hexo<span class="comment"># hexo s</span></span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/29/install_zsh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/29/install_zsh/" class="post-title-link" itemprop="url">安装ZSH</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-29 21:30:33" itemprop="dateCreated datePublished" datetime="2024-04-29T21:30:33+08:00">2024-04-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-30 23:21:46" itemprop="dateModified" datetime="2024-04-30T23:21:46+08:00">2024-04-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="ZSH的安装"><a href="#ZSH的安装" class="headerlink" title="ZSH的安装"></a>ZSH的安装</h1><p>zsh是一个功能强大的shell解释器</p>
-<h3 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zsh</span><br></pre></td></tr></table></figure>
-
-<p>检查是否安装成功</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/shells</span><br><span class="line">...</span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置zsh"><a href="#配置zsh" class="headerlink" title="配置zsh"></a>配置zsh</h3><ol>
-<li>配置很复杂，建议使用开源脚本进行配置</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这个是配置zsh的开源脚本的链接</span><br><span class="line">https://github.com/ohmyzsh/ohmyzsh</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>安装git</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install git</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>通过脚本自动配置</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br><span class="line"><span class="comment">#访问github不顺畅的话，可以用下面的命令，把链接地址替换成了可以正常的访问的网址（这个地址由ohmyzsh项目的作者提供）</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>修改默认的shell解释器</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root字段为用户名，此处给root用户修改shell解释器；如果是其他用户，在此填写该用户的用户名即可。</span></span><br><span class="line">chsh -s /bin/zsh root</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改ZSH主题"><a href="#修改ZSH主题" class="headerlink" title="修改ZSH主题"></a>修改ZSH主题</h3><p>修改提示符为随机主题</p>
-<p>修改~&#x2F;.zshrc中的ZSH_THEME的值为random</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc +11</span><br><span class="line"></span><br><span class="line">ZSH_THEME=<span class="string">&quot;random&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>通过zsh命令修改主题</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">zsh</span><br><span class="line">jb@localhost:~</span><br><span class="line">[oh-my-zsh] Random theme <span class="string">&#x27;sammy&#x27;</span> loaded</span><br><span class="line">~$ </span><br></pre></td></tr></table></figure>
-
-<p>保存自己喜欢的主题</p>
-<p>将自己喜欢的主题名替换random即可</p>
-<h3 id="Q-A：有点小问题"><a href="#Q-A：有点小问题" class="headerlink" title="Q&amp;A：有点小问题"></a>Q&amp;A：有点小问题</h3><ol>
-<li><p>为什么我使用<code>chsh</code>命令的时候，提示命令不存在？</p>
-<p>提示命令不存在</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#此处代码为伪代码</span></span><br><span class="line">命令:chsh -s /bin/zsh</span><br><span class="line">提示：<span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
-
-<p>找到<code>chsh</code>命令的安装包</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#参考链接：https://forums.centos.org/viewtopic.php?t=73864</span></span><br><span class="line"><span class="comment">#此处代码为论坛上的代码</span></span><br><span class="line">[root@centos8 ~]<span class="comment"># dnf provides &#x27;*/chsh&#x27;</span></span><br><span class="line">Last metadata expiration check: 0:51:14 ago on Sat Mar 28 14:23:21 2020.</span><br><span class="line">util-linux-user-2.32.1-17.el8.x86_64 : libuser based util-linux utilities</span><br><span class="line">Repo : BaseOS</span><br><span class="line">Matched from:</span><br><span class="line">Filename : /etc/pam.d/chsh</span><br><span class="line">Filename : /usr/bin/chsh</span><br><span class="line">Filename : /usr/share/bash-completion/completions/chsh</span><br></pre></td></tr></table></figure>
-
-<p>装包</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf -y install util-linux-user-2.32.1-17.el8.x86_64</span><br></pre></td></tr></table></figure>
-
-<p>验证</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[jbb@localhost ~]$ chsh -s /bin/zsh</span><br><span class="line">Changing shell <span class="keyword">for</span> jbb.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>为什么安装完zsh提示没有配置文件？</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[jbb@localhost]~% zsh</span><br><span class="line">This is the Z Shell configuration <span class="keyword">function</span> <span class="keyword">for</span> new <span class="built_in">users</span>,</span><br><span class="line">zsh-newuser-install.</span><br><span class="line">You are seeing this message because you have no zsh startup files</span><br><span class="line">(the files .zshenv, .zprofile, .zshrc, .zlogin <span class="keyword">in</span> the directory</span><br><span class="line">~).  This <span class="keyword">function</span> can <span class="built_in">help</span> you with a few settings that should</span><br><span class="line">make your use of the shell easier.</span><br><span class="line"></span><br><span class="line">You can:</span><br><span class="line"></span><br><span class="line">(q)  Quit and <span class="keyword">do</span> nothing.  The <span class="keyword">function</span> will be run again next time.</span><br><span class="line"></span><br><span class="line">(0)  Exit, creating the file ~/.zshrc containing just a comment.</span><br><span class="line">     That will prevent this <span class="keyword">function</span> being run again.</span><br><span class="line"></span><br><span class="line">(1)  Continue to the main menu.</span><br><span class="line"></span><br><span class="line">--- Type one of the keys <span class="keyword">in</span> parentheses --- </span><br><span class="line"></span><br><span class="line">q 退出（下次使用zsh还有这个告警）</span><br><span class="line">0 创建一个空的配置文件（用于取消该告警）</span><br><span class="line">1 手动配置各种参数</span><br></pre></td></tr></table></figure>
-
-<p>出现该告警就是因为没有配置zsh的配置文件，需要自己配置一下。建议用脚本配置<code>sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot; &quot;&quot; --unattended</code></p>
-</li>
-<li><p>root安装的zsh，普通用户可以用吗？</p>
-<ul>
-<li>普通用户使用zsh</li>
-</ul>
-<blockquote>
-<ol>
-<li>添加用户<br>useradd 用户名<br>  passwd 密码<br>  密码</li>
-<li>&#x3D;&#x3D;切换终端&#x3D;&#x3D;（必须使用新创建的用户重新登录）</li>
-<li>更改默认shell解释器<br>chsh -s &#x2F;bin&#x2F;zsh</li>
-<li>配置zsh</li>
-</ol>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot; --unattended</span></span><br><span class="line"></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> --unattended</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/29/install_wordpress/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sekitonu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/29/install_wordpress/" class="post-title-link" itemprop="url">安装wordpress</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-29 18:39:41" itemprop="dateCreated datePublished" datetime="2024-04-29T18:39:41+08:00">2024-04-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-01 17:19:16" itemprop="dateModified" datetime="2024-05-01T17:19:16+08:00">2024-05-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="安装WordPress"><a href="#安装WordPress" class="headerlink" title="安装WordPress"></a>安装WordPress</h1><h3 id="开启本地代理"><a href="#开启本地代理" class="headerlink" title="开启本地代理"></a>开启本地代理</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=http://10.0.0.1:10809</span><br><span class="line"><span class="built_in">export</span> https_proxy=http://10.0.0.1:10809</span><br></pre></td></tr></table></figure>
-
-<h3 id="部署docker"><a href="#部署docker" class="headerlink" title="部署docker"></a>部署docker</h3><h3 id="拉取wordpress"><a href="#拉取wordpress" class="headerlink" title="拉取wordpress"></a>拉取wordpress</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull wordpress</span><br></pre></td></tr></table></figure>
-
-<h3 id="拉取mysql"><a href="#拉取mysql" class="headerlink" title="拉取mysql"></a>拉取mysql</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行mysql容器"><a href="#运行mysql容器" class="headerlink" title="运行mysql容器"></a>运行mysql容器</h3><ol>
-<li><p>启动mysql容器</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --privileged=<span class="literal">true</span> --name mysql -v /data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mysql:latest</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建数据库和授权用户</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#登录数据库</span></span><br><span class="line">root@wordpress:~<span class="comment"># docker exec -it mysql  bash</span></span><br><span class="line">bash-4.4<span class="comment"># mysql -u root -p123456</span></span><br><span class="line"><span class="comment">#建立数据库</span></span><br><span class="line">CREATE DATABASE IF NOT EXISTS wordpress;</span><br><span class="line"><span class="comment">#创建用户</span></span><br><span class="line">CREATE USER <span class="string">&#x27;wordpress&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED BY <span class="string">&#x27;wordpress&#x27;</span>;</span><br><span class="line"><span class="comment">#授权</span></span><br><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO <span class="string">&#x27;wordpress&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="运行wordpress容器"><a href="#运行wordpress容器" class="headerlink" title="运行wordpress容器"></a>运行wordpress容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name wordpress --link mysql -p 80:80 -d wordpress</span><br></pre></td></tr></table></figure>
-
-<h3 id="填写配置信息"><a href="#填写配置信息" class="headerlink" title="填写配置信息"></a>填写配置信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#浏览器输入ip地址</span><br><span class="line">填写数据库中的信息，如下图所示</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../pic/image-20240427171659822.png" alt="image-20240427171659822"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -1213,6 +379,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Service"><span class="nav-number">1.</span> <span class="nav-text">Service</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Service%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.</span> <span class="nav-text">1. Service创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%AE%9A%E4%B9%89service"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 定义service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%88%9B%E5%BB%BApod-%E5%88%9B%E5%BB%BAsvc"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 创建pod&amp;&amp;创建svc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E9%AA%8C%E8%AF%81"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 验证</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-1-%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87svc%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E8%AE%BF%E9%97%AEpod%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">1.3.1 验证通过svc是否可以正常访问pod的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-2-%E9%AA%8C%E8%AF%81%E9%87%8D%E5%BB%BApod%E5%90%8E%EF%BC%8C%E6%98%AF%E5%90%A6%E4%B8%8D%E5%BD%B1%E5%93%8Dpod%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">1.3.2 验证重建pod后，是否不影响pod的访问</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-3-%E8%AE%BF%E9%97%AE%E5%90%8C%E5%90%8D%E7%A7%B0%E7%A9%BA%E9%97%B4%E4%B8%8B%E7%9A%84Service"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">1.3.3 访问同名称空间下的Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-4-%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%90%8C%E5%90%8D%E7%A7%B0%E7%A9%BA%E9%97%B4%E4%B8%8B%E7%9A%84Service"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">1.3.4 访问不同名称空间下的Service</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Service%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">2. Service类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-NodePort%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 NodePort类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-%E5%AE%9A%E4%B9%89NodePort%E7%B1%BB%E5%9E%8B%E7%9A%84Service"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">2.1.1 定义NodePort类型的Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-%E5%88%9B%E5%BB%BANodePort%E7%B1%BB%E5%9E%8B%E7%9A%84Service"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2.1.2 创建NodePort类型的Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-%E6%9F%A5%E7%9C%8BService%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">2.1.3 查看Service的详细信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-%E6%9F%A5%E7%9C%8BNodePort%E7%B1%BB%E5%9E%8B%E7%9A%84Service%E6%9A%B4%E9%9C%B2%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%8C%83%E5%9B%B4"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">2.1.4 查看NodePort类型的Service暴露的端口范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-%E9%AA%8C%E8%AF%81%E7%AB%AF%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">2.1.5 验证端口是否可以正常使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E6%9F%A5%E7%9C%8B%E9%9B%86%E7%BE%A4%E4%B8%AD%E6%89%80%E6%9C%89%E7%9A%84service"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">2.2 查看集群中所有的service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E4%BF%AE%E6%94%B9NodePort%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AB%AF%E5%8F%A3"><span class="nav-number">1.2.1.7.</span> <span class="nav-text">2.3 修改NodePort模式下正在使用的端口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Service%E7%9A%84%E7%94%A8%E9%80%94"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 Service的用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-External%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 External类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-%E5%AE%9A%E4%B9%89External%E7%B1%BB%E5%9E%8B%E7%9A%84Service"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">2.3.1 定义External类型的Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-%E9%AA%8C%E8%AF%81%E4%BB%A3%E7%90%86%E7%B3%BB%E7%BB%9F%E5%90%8D%E7%A7%B0%E7%A9%BA%E9%97%B4%E4%B8%8B%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">2.3.2 验证代理系统名称空间下的服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-%E9%AA%8C%E8%AF%81%E4%BB%A3%E7%90%86%E5%85%B6%E4%BB%96%E5%90%8D%E7%A7%B0%E7%A9%BA%E9%97%B4%E4%B8%8B%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">2.3.3 验证代理其他名称空间下的服务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%A4%9A%E7%AB%AF%E5%8F%A3Service"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 多端口Service</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
